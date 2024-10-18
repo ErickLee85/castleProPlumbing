@@ -8,6 +8,50 @@ const callNowBtn = document.getElementById('call-now-btn')
 const heroSection = document.querySelector('.hero');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('nav ul');
+const closeBtn = document.querySelector('.close')
+const snack = document.querySelector('.snack')
+
+closeBtn.addEventListener('click', () => {
+    snack.classList.add('hide')
+})
+
+function openSnack() {
+ snack.classList.add('open')
+}
+
+
+document.getElementById('send-msg-btn').addEventListener('click', async function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    // Gather form inputs
+    const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+    };
+
+    const sendButton = document.getElementById('send-msg-btn');
+    sendButton.disabled = true;
+    sendButton.textContent = 'Sending...'; 
+
+    try {
+        const response = await axios.post('https://nodemailer-gold.vercel.app/emailPlumbers', formData);
+        openSnack()
+        sendButton.disabled = false;
+        sendButton.textContent = 'Send Message'; 
+      } catch (error) {
+        sendButton.disabled = false;
+        sendButton.textContent = 'Send Message'; 
+        alert(error.message)
+      }
+      document.querySelector('.contact-form').reset();
+
+});
+
+
+
 
 // hamburger.addEventListener('click', () => {
 //     navMenu.classList.toggle('active');
@@ -207,3 +251,4 @@ faqLink.addEventListener('click', goToFaq)
 contactLink.addEventListener('click', goToForm)
 contactBtn.addEventListener('click', goToForm)
 callNowBtn.addEventListener('click', callUs)
+
