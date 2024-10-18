@@ -3,7 +3,7 @@
 
 :root {
     --blue-primary: #0099ff;
-    --text-color: rgb(86, 82, 92);
+    --text-color: rgb(32, 32, 32);
     --box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
     --mobile-h1: 2.5rem;
     --mobile-p: 1rem;
@@ -22,6 +22,14 @@ body ,html {
   a {
     text-decoration: none;
     color: black;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-image: url('./images/IMG_0844.jpg');
+    background-size: cover;
   }
   .contact {
     width: 100%;
