@@ -3,7 +3,8 @@
 
 :root {
     --blue-primary: #0099ff;
-    --text-color: rgb(32, 32, 32);
+    --blue-alt:#78c9ff;
+    --text-color: rgb(61, 61, 70);
     --box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
     --mobile-h1: 2.5rem;
     --mobile-p: 1rem;
@@ -215,7 +216,7 @@ body ,html {
     min-width: 200px;
     padding:10px 20px;
     margin-top:10px;
-    background:var(--blue-primary);
+    background:linear-gradient(to right, var(--blue-primary), var(--blue-alt));
     color:white;
     font-weight:400;
     cursor:pointer;
@@ -235,7 +236,7 @@ body ,html {
     border:1px solid var(--blue-primary);
     padding:10px 20px;
     margin-top:10px;
-    background:var(--blue-primary);
+    background:linear-gradient(to right, var(--blue-primary), var(--blue-alt));
     color:white;
     font-weight:400;
     cursor:pointer;
@@ -268,7 +269,7 @@ body ,html {
   }
 
   #services-btn:hover {
-    background: var(--blue-primary);
+    background:linear-gradient(to right, var(--blue-primary), var(--blue-alt));
     color: white;
   }
 
@@ -659,7 +660,7 @@ body ,html {
 
   .faq-item.active .faq-question {
     border-bottom: 1px solid gainsboro;
-    background-color: var(--blue-primary);
+    background:linear-gradient(to right, var(--blue-primary), var(--blue-alt));
     color: white;
   }
 
@@ -738,7 +739,7 @@ body ,html {
     width: 100%;
     padding:10px 20px;
     margin-top:20px;
-    background:var(--blue-primary);
+    background:linear-gradient(to right, var(--blue-primary), var(--blue-alt));
     color:white;
     font-weight:400;
     cursor:pointer;
