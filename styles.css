@@ -515,7 +515,8 @@ body ,html {
     border: 1px solid gainsboro;
     border-radius: 10px;
     position: relative;
-    transition: 300ms all ease-in-out;
+    transform-origin: center center;
+    transition: all 300ms ease-in-out;
   }
 
 
@@ -569,6 +570,21 @@ body ,html {
 
   .image-nine {
     background-image: url('./portfolio/img_9.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-ten {
+    background-image: url('./portfolio/img_10.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-eleven {
+    background-image: url('./portfolio/img_11.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-twelve {
+    background-image: url('./portfolio/img_13.jpg');
     background-size: cover;
     background-position: center;
   }
