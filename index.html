@@ -257,37 +257,39 @@
                 <li><span class="checkmark">✔</span>Clean & Respectful</li>
             </ul>
         </section>
-            <form action="" class="contact-form">
-                <span>Message Us</span>
-                <div class="form-row">
-                    <section class="input-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id='firstName' required>
-                    </section>
-                    <section class="input-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id='lastName' required>
-                    </section>
-                </div>
-                
-                <div class="form-row">
-                    <section class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id='email' required>
-                    </section>
-                    <section class="input-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" id='phone'>
-                    </section>
-                </div>
-                
-                <section class="input-group" style="margin-top: 20px;">
-                    <label for="message">Message</label>
-                    <textarea id="message" cols="30" rows="5"></textarea>
-                </section>
-                
-                  <button id="send-msg-btn">Send Message <i class="fa-solid fa-paper-plane" id="paper-plane"></i></button>
-            </form>
+        <form action="" class="contact-form" >
+          <span>Message Us</span>
+          <div class="form-row">
+              <section class="input-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id='firstName' name="firstName" required>
+              </section>
+              <section class="input-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id='lastName' name="lastName" required>
+              </section>
+          </div>
+         
+          <div class="form-row">
+              <section class="input-group">
+                  <label for="email">Email</label>
+                  <input type="email" id='email' name="email" required>
+              </section>
+              <section class="input-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id='phone' name="phone">
+              </section>
+          </div>
+         
+          <section class="input-group" style="margin-top: 20px;">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" cols="30" rows="5" required></textarea>
+          </section>
+         
+          <button id="send-msg-btn" type="submit">
+              Send Message <i class="fa-solid fa-paper-plane" id="paper-plane"></i>
+          </button>
+      </form>
     </section>
   </div>
   

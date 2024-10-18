@@ -16,14 +16,16 @@ closeBtn.addEventListener('click', () => {
 })
 
 function openSnack() {
+    if(snack.classList.contains('hide')) {
+        snack.classList.remove('hide')
+    }
  snack.classList.add('open')
 }
 
 
 document.getElementById('send-msg-btn').addEventListener('click', async function(event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
-
-    // Gather form inputs
+    
     const formData = {
         firstName: document.getElementById('firstName').value,
         lastName: document.getElementById('lastName').value,
@@ -31,6 +33,7 @@ document.getElementById('send-msg-btn').addEventListener('click', async function
         phone: document.getElementById('phone').value,
         message: document.getElementById('message').value
     };
+     console.log(formData)
 
     const sendButton = document.getElementById('send-msg-btn');
     sendButton.disabled = true;
