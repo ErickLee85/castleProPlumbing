@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --blue-primary: #0099ff;
+    --text-color: rgb(86, 82, 92);
+    --box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+    --mobile-h1: 2.5rem;
+    --mobile-p: 1rem;
+}
+
+body ,html {
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .contact {
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position:fixed;
+    top:0;
+    background:white;
+    z-index:10;
+  }
+  
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid gainsboro;
+    top:50px;
+    position:fixed;
+    background:white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* bottom shadow */
+    z-index: 10;
+  }
+  
+  ul {
+    display: flex;
+    gap:20px;
+     list-style: none;
+    display:flex;
+    align-items:center;
+  }
+  
+  nav ul li, .contact ul li {
+    cursor: pointer;
+    font-weight: 300;
+    color:var(--text-color);
+  }
+
+
+
+  .contact ul li {
+    color: white;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    background: var(--blue-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+  }
+
+  .contact ul li:hover {
+    border: 1px solid var(--blue-primary);
+    background: white;
+    color: var(--blue-primary);
+    box-shadow: var(--box-shadow);
+  }
+
+  .contact ul li i {
+    font-size: 12px;
+  }
+
+  #call-btn {
+    background:transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #call-btn a {
+    transition: 300ms ease-in-out;
+  }
+
+
+  #call-btn a:hover {
+    color: var(--blue-primary);
+  }
+  .call-icon {
+    color: var(--blue-primary);
+  }
+  
+
+  .underline-hover-effect {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.25rem; /* defines the space between text and underline */
+    position: relative;
+  }
+  
+  .underline-hover-effect::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--blue-primary);
+    transition: width 0.25s ease-out;
+  }
+  .underline-hover-effect:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+
+
+  .phone-svg {
+   color: white;
+  }
+  
+  .hero {
+    margin-top: 150px;
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Place above the background images */
+}
+
+.hero-titles {
+    position: relative;
+    z-index: 2; /* Place above the background images */
+}
+
+/* Make sure the wave SVG stays on top */
+.hero > svg {
+    position: relative;
+    z-index: 2;
+}
+  
+  .hero-titles h1{
+    margin-top: 100px;
+    font-size: 5rem;
+    color:var(--text-color);
+    line-height: 1.2;
+  }
+  
+  .hero-titles p {
+    font-size: 1.5rem;
+    margin-top:20px;
+    margin-bottom:10px;
+    color: var(--blue-primary);
+  }
+
+  .hero-titles p:nth-child(3) {
+    margin-top: -10px;
+    font-size: 1rem;
+  }
+
+  #location-pin {
+    margin-left: 5px;
+  }
+  
+  #contact-us-btn {
+    outline:none;
+    border:1px solid var(--blue-primary);
+    min-width: 200px;
+    padding:10px 20px;
+    margin-top:10px;
+    background:var(--blue-primary);
+    color:white;
+    font-weight:400;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor:pointer;
+    border-radius:5px;
+    transition: all 300ms ease-in-out;
+    margin-left: 20px;
+    font-size: 1.2rem;
+  }
+
+  #contact-us-btn:hover {
+    background:white;
+    color: var(--blue-primary);
+  }
+
+  #call-now-btn {
+    outline:none;
+    border:1px solid var(--blue-primary);
+    padding:10px 20px;
+    margin-top:10px;
+    background:var(--blue-primary);
+    color:white;
+    font-weight:400;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor:pointer;
+    border-radius:5px;
+    transition: all 300ms ease-in-out;
+    margin-right:10px;
+    min-width: 150px;
+    font-size: 1.2rem;
+
+  }
+  
+  #call-now-btn:hover {
+    background: white;
+    color: var(--blue-primary);
+  }
+  
+  #services-btn {
+    outline:none;
+    border:1px solid var(--blue-primary);
+    padding:10px 20px;
+    margin-top:10px;
+    background:white;
+    color:var(--blue-primary);
+    font-weight:400;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor:pointer;
+    border-radius:5px;
+    transition: all 300ms ease-in-out;
+    font-size: 1.2rem;
+
+  }
+
+  #services-btn:hover {
+    background: var(--blue-primary);
+    color: white;
+  }
+
+  
+  .services {
+    padding:20px;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    gap: 40px;
+    justify-content:center;
+    align-items:center;
+    padding-bottom: 100px;
+  }
+  
+  .service-text {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    max-width:500px;
+    gap:15px;
+  }
+
+  .security-details {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+  
+  .services p, .security-details p, .portfolio, .faq-title  {
+    text-transform :uppercase;
+    font-size:1rem;
+    font-weight:600;
+    color: var(--blue-primary);
+  }
+  
+  .services h2, .security-details h2, .portfolio h2, .faq-subtitle {
+    color:var(--text-color);
+    font-size:2.5rem;
+  }
+
+  .faq-subtitle {
+    text-align: center;
+  }
+  
+  .services span, .security-details span, .portfolio span, .faq-span {
+    display:inline-block;
+    font-size:0.9rem;
+    font-weight: 300;
+    text-align:center;
+    color:var(--text-color);
+  }
+
+  .portfolio span {
+    max-width: 500px;
+  }
+
+  .portfolio h2, .portfolio span {
+    text-transform: none;
+  }
+
+  .portfolio span {
+    font-weight: 300;
+  }
+
+  .security-details p, .security-details h2, .security-details span {
+    text-align: left !important;
+  }
+  
+  .service-grid {
+    margin-top:20px;
+    max-width:1000px;
+    display: grid;
+    gap:20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    position: relative;
+    overflow: hidden; /* Ensure content stays inside the card */
+  }
+
+/* Common styles for all cards */
+.card {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card 1 */
+.card:nth-child(1) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./images/plumber_working.jpeg');
+}
+
+/* Card 2 */
+.card:nth-child(2) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./images/bathtub.jpg');
+}
+
+/* Card 3 */
+.card:nth-child(3) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./images/drain_cleaning.jpg');
+}
+
+/* Card 4 */
+.card:nth-child(4) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./portfolio/img_8.jpg');
+}
+
+/* Card 5 */
+.card:nth-child(5) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./images/water_leak.jpg');
+}
+
+/* Card 6 */
+.card:nth-child(6) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./images/sewer_line.webp');
+}
+
+
+
+  
+  .clip-path {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: var(--blue-primary);
+    clip-path: circle(0% at 0% 0%); /* Small circle at center */
+    transition: clip-path 700ms ease-in-out;
+
+  }
+  
+  .card:hover {
+    box-shadow: var(--box-shadow);
+  }
+  
+  .card:hover .clip-path {
+    clip-path: circle(100% at 50% 50%); /* Expand larger to cover the entire card */
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 800;
+    color:white;
+    transition: all 300ms ease-in-out;
+    width: 100%;
+    background: var(--text-color);
+    padding: 10px;
+  }
+  
+  .card p {
+    margin-top: 20px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: none;
+  }
+  
+  
+  .service-icon i {
+    font-size:2.5rem;
+    color: gainsboro;
+    margin-block:20px;
+  }
+  
+  .security {
+    margin-top: -54px;
+    width: 100%;
+    height: 100vh;
+    background:white;
+    position: relative;
+  }
+
+  .portfolio {
+    margin-top: 50px;
+    width: 100%;
+    min-height: 100vh;
+    /* background:rgb(251, 251, 255); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  /* .portfolio::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0.3;
+    background-image: linear-gradient(rgb(241, 241, 241) 1px, transparent 1px), linear-gradient(to right, rgb(241,241,241) 1px, #ffffff 1px);
+    background-size: 20px 20px;
+    z-index: -1; 
+} */
+
+  .security-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+  }
+
+
+
+  .security-image {
+    min-height: 500px;
+    min-width: 450px;
+    border-radius: 20px;
+    /* background: linear-gradient(rgba(251, 251, 255,0.8), rgba(251, 251, 255,0.8)),url('./images/family.jpg'); */
+    background-image: url('./images/family.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    border: 1px solid gainsboro;
+  }
+
+  .security-list {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--text-color);
+  }
+
+  .checkmark {
+    margin-right: 5px;
+    font-size: 1rem;
+    color: var(--blue-primary) !important;
+  }
+
+  .image-container {
+    margin-top:50px;
+    max-width:1000px;
+    display: grid;
+    gap:20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .image-container div {
+    min-width: 320px;
+    min-height: 300px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    position: relative;
+    transition: 300ms all ease-in-out;
+  }
+
+
+
+  .image-one {
+    background-image: url('./portfolio/img_1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-two {
+    background-image: url('./portfolio/img_2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-three {
+    background-image: url('./portfolio/img_3.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-four {
+    background-image: url('./portfolio/img_4.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-five {
+    background-image: url('./portfolio/img_5.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-six {
+    background-image: url('./portfolio/img_6.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-one {
+    background-image: url('./portfolio/img_1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .image-seven {
+    background-image: url('./portfolio/img_7.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-eight {
+    background-image: url('./portfolio/img_8.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-nine {
+    background-image: url('./portfolio/img_9.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .faq-container {
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .faq-span {
+    margin-bottom: 50px;
+    max-width: 500px;
+  }
+  
+  .faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .faq-question {
+    background-color: #f8f8f8; 
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faq-question h3 {
+    color: var(--text-color);
+    font-weight: 400 !important;
+    transition: all 300ms ease-in-out;
+  }
+  .faq-toggle {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+  }
+  
+  .faq-answer p {
+    padding: 15px 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 200px;
+  }
+
+  .faq-item.active .faq-question {
+    border-bottom: 1px solid gainsboro;
+    background-color: var(--blue-primary);
+    color: white;
+  }
+
+  .faq-item.active h3 {
+    color: white;
+  }
+  
+  .faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+  }
+  
+
+  .contact-form {
+    min-height: 550px;
+    min-width: 450px;
+    border-radius: 20px;
+    border: 1px solid gainsboro;
+    padding: 20px;
+    position: relative;
+  }
+
+  .contact-form span {
+    font-size: 2rem;
+    color: var(--blue-primary);
+  }
+
+  
+.form-row {
+    margin-top:20px;
+    display:flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .input-group {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    width: 100%;
+  }
+  
+  
+  input, textarea {
+    background:#f8f8f8; 
+    outline:none;
+    border: 1px solid gainsboro;
+    min-height:30px;
+    border-radius:5px;
+    width: 100%;
+    padding: 10px;
+    transition: all 300ms ease-in-out;
+    font-size: 16px;
+  }
+  
+  input:focus, textarea:focus {
+    border: 1px solid var(--blue-primary)
+  }
+
+  textarea {
+    resize: none;
+    overflow: auto;
+  }
+
+  .input-group label {
+    transition: color 0.3s ease; 
+  }
+
+  .input-group:focus-within label {
+    color: #007bff; /* Label turns blue when input is focused */
+}
+
+  #send-msg-btn {
+    margin: 0 auto;
+    outline:none;
+    border:1px solid var(--blue-primary);
+    width: 100%;
+    padding:10px 20px;
+    margin-top:20px;
+    background:var(--blue-primary);
+    color:white;
+    font-weight:400;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor:pointer;
+    border-radius:5px;
+    transition: all 300ms ease-in-out;
+    font-size: 1.2rem;
+  }
+
+  #send-msg-btn:hover {
+    background:white;
+    color: var(--blue-primary);
+  }
+  
+  #paper-plane {
+    margin-left: 10px;
+  }
+ 
+  @media(max-width:1000px) {
+    .faq-container {
+      padding: 20px;
+    }
+    .service-grid, .image-container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-titles {
+        margin: 20px;
+    }
+
+    .hero-titles h1 {
+        font-size: 3.5rem;
+    }
+
+    .security {
+        height: auto;
+        margin-top: 0;
+      }
+    
+      .security-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+      }
+    
+      .security-image {
+        min-width: unset;
+        width: 100%;
+        min-height: 300px;
+      }
+    
+     
+    
+      .security-details h2, .service-text h2 {
+        font-size: 2rem;
+      }
+
+  }
+
+  @media(max-width:720px) {
+    .nav-links {
+      display: none;
+    }
+  }
+  
+  @media(max-width:620px){
+    
+    .card {
+      min-width:100%;
+    }
+
+    .image-container {
+        max-width: none; /* Remove the max-width constraint */
+        width: 100%;     /* Ensure the container spans full width */
+        margin: 0 auto;  /* Center the container */
+    }
+    .image-container > div {
+        min-width: 0; /* Remove the min-width constraint */
+        width: 100%;
+    }
+     .service-grid, .image-container {
+      grid-template-columns: 1fr;
+    }
+
+    .portfolio {
+        margin-top: -50px;
+        padding: 20px;
+    }
+
+    .faq-subtitle {
+        text-align: left;
+    }
+
+    .portfolio span {
+        padding-bottom: 50px;
+    }
+
+    .service-text {
+        display: block;
+    }
+
+    .service-text span {
+        text-align: left;
+    }
+   
+    .faq-question {
+      font-size: 0.8rem;
+    }
+
+    .contact-form {
+      min-width: none;
+      width: 100%;
+      border:none;
+    }
+  }
