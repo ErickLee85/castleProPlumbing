@@ -12,6 +12,8 @@
 
 body ,html {
     overflow-x: hidden;
+    opacity: 0;
+    animation: scale-up 1000ms linear  forwards;
 }
 * {
     margin: 0;
@@ -25,12 +27,15 @@ body ,html {
     color: black;
   }
 
+
+
   .logo {
     height: 70px;
     width: 70px;
     border-radius: 50%;
     background-image: url('./images/IMG_0844.jpg');
     background-size: cover;
+    cursor: pointer;
   }
   .contact {
     width: 100%;
@@ -97,8 +102,38 @@ body ,html {
     box-shadow: var(--box-shadow);
   }
 
+  #contact-details li {
+    margin-block: 5px;
+  }
+
+  #contact-details li a {
+    font-size: 1rem;
+    transition: 300ms ease-in-out;
+  }
+
+  #contact-details li a:hover {
+    color: var(--blue-primary);
+  }
+
+  #contact-details li  i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--blue-primary);
+  }
+
+
+
   .contact ul li i {
     font-size: 12px;
+  }
+
+  .map-container {
+    min-height: 600px;
+    min-width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
   }
 
   #call-btn {
@@ -192,6 +227,12 @@ body ,html {
     font-size: 5rem;
     color:var(--text-color);
     line-height: 1.2;
+  }
+
+  @keyframes scale-up {
+      to {
+       opacity: 1;
+      }
   }
   
   .hero-titles p {
@@ -393,6 +434,13 @@ body ,html {
   background-image: url('./images/sewer_line.webp');
 }
 
+.card:nth-child(7) {
+  background-image: url('./portfolio/img_14.jpg');
+}
+
+.card:nth-child(8) {
+  background-image: url('./portfolio/img_15.jpg');
+}
 
 
   
@@ -597,6 +645,7 @@ body ,html {
     background-size: cover;
     background-position: center;
   }
+  
 
 
   .faq-container {
@@ -757,6 +806,26 @@ body ,html {
     margin-left: 10px;
   }
 
+  .loader {
+    width: 60px;
+    height: 60px;
+    border: 5px solid var(--blue-primary);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
   .snack {
     position:fixed;
     bottom:0;
@@ -809,6 +878,10 @@ body ,html {
       text-align: center;
       font-size: 0.8rem;
     }
+
+   .contact-icon {
+    font-size: 1rem;
+   }
     
     @keyframes grow {
       from {

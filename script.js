@@ -23,8 +23,55 @@ function openSnack() {
 }
 
 
-document.getElementById('send-msg-btn').addEventListener('click', async function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+// document.getElementById('send-msg-btn').addEventListener('click', async function(event) {
+//     event.preventDefault(); 
+    
+//     const formData = {
+//         firstName: document.getElementById('firstName').value,
+//         lastName: document.getElementById('lastName').value,
+//         email: document.getElementById('email').value,
+//         phone: document.getElementById('phone').value,
+//         message: document.getElementById('message').value
+//     };
+//      console.log(formData)
+
+//     const sendButton = document.getElementById('send-msg-btn');
+//     sendButton.disabled = true;
+//     sendButton.textContent = 'Sending...'; 
+
+//     try {
+//         const response = await axios.post('https://nodemailer-gold.vercel.app/emailPlumbers', formData);
+//         openSnack()
+//         sendButton.disabled = false;
+//         sendButton.textContent = 'Send Message'; 
+//       } catch (error) {
+//         sendButton.disabled = false;
+//         sendButton.textContent = 'Send Message'; 
+//         alert(error.message)
+//       }
+//       document.querySelector('.contact-form').reset();
+// });
+
+function backToTop() {
+    const element = document.querySelector('.hero');
+    const yOffset = -160;
+    const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({
+        top: yPosition,
+        behavior: 'smooth'
+    });
+}
+
+function openFacebookProfile() {
+    window.open("https://www.facebook.com/profile.php?id=61565358593625", "_blank");
+  }
+
+ function openIG() {
+    window.open("https://www.instagram.com/castleproplumbing/?fbclid=IwY2xjawGAX-dleHRuA2FlbQIxMAABHbkt8aM8AiQH--M9-5flwFDL1ya270VsUoAhSYpW4LO8dfJhpb6YwR4RVA_aem_gCJXCYSZjL2MDVy4N6J3ZA", "_blank")
+ } 
+
+document.querySelector('.contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
     
     const formData = {
         firstName: document.getElementById('firstName').value,
@@ -33,24 +80,22 @@ document.getElementById('send-msg-btn').addEventListener('click', async function
         phone: document.getElementById('phone').value,
         message: document.getElementById('message').value
     };
-     console.log(formData)
-
+    
     const sendButton = document.getElementById('send-msg-btn');
     sendButton.disabled = true;
     sendButton.textContent = 'Sending...'; 
 
     try {
         const response = await axios.post('https://nodemailer-gold.vercel.app/emailPlumbers', formData);
-        openSnack()
+        openSnack();
         sendButton.disabled = false;
         sendButton.textContent = 'Send Message'; 
-      } catch (error) {
+    } catch (error) {
         sendButton.disabled = false;
         sendButton.textContent = 'Send Message'; 
-        alert(error.message)
-      }
-      document.querySelector('.contact-form').reset();
-
+        alert(error.message);
+    }
+    document.querySelector('.contact-form').reset()
 });
 
 
@@ -59,6 +104,8 @@ document.getElementById('send-msg-btn').addEventListener('click', async function
 // hamburger.addEventListener('click', () => {
 //     navMenu.classList.toggle('active');
 // });
+
+
 const images = [
     './images/unplash_img.jpg',
     './images/bathroom.jpg',
@@ -103,7 +150,7 @@ function preloadImages(callback) {
     loadingOverlay.style.justifyContent = 'center';
     loadingOverlay.style.alignItems = 'center';
     loadingOverlay.style.zIndex = '9999';
-    loadingOverlay.innerHTML = 'Loading...';
+    loadingOverlay.classList.add('.loader')
     document.body.appendChild(loadingOverlay);
 
     // Preload each image

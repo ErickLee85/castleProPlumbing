@@ -13,8 +13,8 @@
 <body>
   <div class="contact">
     <ul class="social-links">
-        <li><i class="fa-brands fa-facebook-f"></i></li>
-        <li><i class="fa-brands fa-square-instagram"></i></li>
+        <li onclick="openFacebookProfile()"><i class="fa-brands fa-facebook-f"></i></li>
+        <li onclick="openIG()"><i class="fa-brands fa-square-instagram"></i></li>
         <li><i class="fa-sharp fa-solid fa-house"></i></li>
     </ul>
     <button id="call-btn">
@@ -25,7 +25,7 @@
     </button>
   </div>
   <nav>
-    <div class="logo"></div>
+    <div class="logo" onclick="backToTop()"></div>
     <!-- <div class="hamburger">
         <i class="fa-solid fa-bars"></i>
     </div> -->
@@ -126,12 +126,27 @@
                 <p>We offer thorough inspections and expert repairs or replacements for sewer lines, ensuring your plumbing operates efficiently and safely.</p>
             </section>
         </div>
+
+        <div class="card">
+          <h3>Water Filtration Systems</h3>
+          <section class="clip-path">
+              <p>We provide top-of-the-line water filtration systems to ensure your home's water is pure, safe, and great-tasting. Trust our experts for professional installation and maintenance services.</p>
+          </section>
+      </div>
+      
+      <div class="card">
+          <h3>New Construction</h3>
+          <section class="clip-path">
+              <p>Our team specializes in comprehensive plumbing solutions for new construction projects. From design to installation, we ensure your plumbing system is efficient and up to code.</p>
+          </section>
+      </div>
+      
+    </div>
     </section>
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(251, 251, 255)" fill-opacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,112C1120,75,1280,53,1360,42.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> -->
 
   </div>
 
- 
 
   <div class="portfolio">
    <div class="service-text">
@@ -251,13 +266,12 @@
             <p>Contact Us</p>
             <h2>Get in touch with the experts.</h2>
             <span>Enter your contacts details below to send us an email or give us a call today!</span>
-            <ul class="security-list">
-                <li><span class="checkmark">✔</span>Licensed & Insured Professionals</li>
-                <li><span class="checkmark">✔</span>Trusted Experts</li>
-                <li><span class="checkmark">✔</span>Clean & Respectful</li>
+            <ul class="security-list" id="contact-details">
+                <li><a href="tel:+19018254717"><i class="fa-solid fa-phone contact-icon" ></i>901.825.4717</a></li>
+                <li><a href="mailto:castleproplumbing@gmail.com"><i class="fa-solid fa-envelope contact-icon"></i>castleproplumbing@gmail.com</a></li>
             </ul>
         </section>
-        <form action="" class="contact-form" >
+        <form  class="contact-form" >
           <span>Message Us</span>
           <div class="form-row">
               <section class="input-group">
@@ -298,6 +312,15 @@
     <p class="p-snack">Message Sent </p>
     <spa class="close">x</span>
   </span>
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207592.0830499307!2d-90.12893231249998!3d35.149534299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x887f8744d43e8df3%3A0x5dc0913398b424b7!2sMemphis%2C%20TN!5e0!3m2!1sen!2sus!4v1697724911615!5m2!1sen!2sus"
+    style="border:2px solid gainsboro;"
+    height="600"
+    width="100%"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
   <footer style="background-color: #f8f8f8; padding: 20px; text-align: center;">
     <p style="color: #555;">© 2024 Castle Pro Plumbing LLC. All rights reserved.</p>
   </footer>
