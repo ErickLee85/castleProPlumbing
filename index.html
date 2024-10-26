@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Castle Pro Plumbing offers professional commercial and residential plumbing services in the Mid-South. Licensed & insured professionals for all your plumbing needs. Call us at 901.825.4717.">
+    <meta name="keywords" content="Castle Pro Plumbing, plumbing services, commercial plumbing, residential plumbing, Memphis plumbing, pipe installation, drain cleaning, water heater services, leak detection, sewer line services, plumbing repairs, water filtration">
+    <meta name="author" content="Castle Pro Plumbing">
+
+    <meta property="og:title" content="Professional Plumbing Services | Castle Pro Plumbing">
+    <meta property="og:description" content="Professional commercial & residential plumbing services in the Mid-South. Reliable, licensed, and insured plumbers for all your needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.castleproplumbing.com/">
+    <meta property="og:image" content="https://www.castleproplumbing.com/images/IMG_0844.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Professional Plumbing Services | Castle Pro Plumbing">
+  <meta name="twitter:description" content="Professional commercial & residential plumbing services in the Mid-South. Reliable, licensed, and insured plumbers for all your needs.">
+  <meta name="twitter:image" content="https://www.castleproplumbing.com/images/IMG_0844.jpg"> <!-- Replace with your image URL -->
+
+  
+
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/aec8d5c56a.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -13,9 +32,9 @@
 <body>
   <div class="contact">
     <ul class="social-links">
-        <li onclick="openFacebookProfile()"><i class="fa-brands fa-facebook-f"></i></li>
+      <a href="https://www.facebook.com/profile.php?id=61565358593625" target="_blank"><li><i class="fa-brands fa-facebook-f"></i></li></a>
         <li onclick="openIG()"><i class="fa-brands fa-square-instagram"></i></li>
-        <li><i class="fa-sharp fa-solid fa-house"></i></li>
+        <a href="https://nextdoor.com/pages/castle-pro-plumbing-southaven-ms/?init_source=org_pages" target="_blank"><li><i class="fa-sharp fa-solid fa-house"></i></li></a>
     </ul>
     <button id="call-btn">
         <svg data-slot="icon" height="25px" class="call-icon" width="25px" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -24,23 +43,22 @@
           <a href="tel:19018254717">901.825.4717</a>
     </button>
   </div>
-  <nav>
-    <div class="logo" onclick="backToTop()"></div>
-    <!-- <div class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-    </div> -->
-    <ul class="nav-links">
-      <li class="underline-hover-effect" id="services-link">Services</li>
-      <li class="underline-hover-effect" id="portfolio-link">Portfolio</li>
-      <li class="underline-hover-effect">Reviews</li>
-      <li class="underline-hover-effect" id="faq-link">FAQs</li>
-      <li class="underline-hover-effect" id="contact-link">Contact</li>
-    </ul>
-    <button id="contact-us-btn">Contact Us</button>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo" onclick="backToTop()"></div>
+      <ul class="nav-links">
+        <li class="underline-hover-effect" id="services-link">Services</li>
+        <li class="underline-hover-effect" id="portfolio-link">Portfolio</li>
+        <li class="underline-hover-effect">Reviews</li>
+        <li class="underline-hover-effect" id="faq-link">FAQs</li>
+        <li class="underline-hover-effect" id="contact-link">Contact</li>
+      </ul>
+      <button id="contact-us-btn">Contact Us</button>
+    </nav>
+  </header>
   
-<div class="hero">
- <section class="hero-section">
+<section class="hero">
+ <div class="hero-section">
     <div class="hero-titles">
       <h1>Castle <br>Pro<br> Plumbing</h1>
    <p>Commercial & Residential Plumbing</p>
@@ -52,13 +70,13 @@
   </svg>
       </button>
     </div>
- </section>
+  </div>
  <svg xmlns="http://www.w3.org/2000/svg" class="svg-wave" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,112C1120,75,1280,53,1360,42.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
 
-</div>
-<div class="security">
-    <section class="security-container">
-        <section class="security-details">
+</section>
+<section class="security">
+    <div class="security-container">
+        <div class="security-details">
             <p>Reliable & Secure</p>
             <h2>Feel Confident in the Professionals You Welcome Into Your Home</h2>
             <span>Hiring unreliable plumbers can add unnecessary stress. Let us ease your mind—plumbing shouldn’t be another worry. We promise a worry-free plumbing experience.</span>
@@ -67,13 +85,13 @@
                 <li><span class="checkmark">✔</span>Trusted Experts</li>
                 <li><span class="checkmark">✔</span>Clean & Respectful</li>
             </ul>
-        </section>
-        <section class="security-image"></section>
-    </section>
-  </div>
+          </div>
+        <div class="security-image"></div>
+      </div>
+  </section>
 
 
-<div class="services">
+<section class="services">
     <section class="service-text">
       <p>Our Services</p>
       <h2>Top Plumbing Services</h2>
@@ -145,10 +163,10 @@
     </section>
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(251, 251, 255)" fill-opacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,112C1120,75,1280,53,1360,42.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> -->
 
-  </div>
+  </section>
 
 
-  <div class="portfolio">
+  <section class="portfolio">
    <div class="service-text">
     <p>Our Portfolio</p>
     <h2>Top Plumbing Projects</h2>
@@ -168,9 +186,9 @@
         <div class="image-eleven"></div>
         <div class="image-twelve"></div>
     </div>
-  </div>
+  </section>
 
-  <div class="faq-container">
+  <section class="faq-container">
     <div class="service-text">
         <p class="faq-title">FAQs</p>
         <h2 class="faq-subtitle">Questions & Answers</h2>
@@ -257,55 +275,56 @@
         </div>
       </div>
 
-  </div>
+    </section>
 
   
-<div class="security" id="contact-us-form">
-    <section class="security-container">
-        <section class="security-details">
-            <p>Contact Us</p>
-            <h2>Get in touch with the experts.</h2>
-            <span>Enter your contacts details below to send us an email or give us a call today!</span>
-            <ul class="security-list" id="contact-details">
-                <li><a href="tel:+19018254717"><i class="fa-solid fa-phone contact-icon" ></i>901.825.4717</a></li>
-                <li><a href="mailto:castleproplumbing@gmail.com"><i class="fa-solid fa-envelope contact-icon"></i>castleproplumbing@gmail.com</a></li>
-            </ul>
-        </section>
-        <form  class="contact-form" >
-          <span>Message Us</span>
-          <div class="form-row">
-              <section class="input-group">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id='firstName' name="firstName" required>
-              </section>
-              <section class="input-group">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id='lastName' name="lastName" required>
-              </section>
+    <section class="security" id="contact-us-form">
+      <div class="security-container">
+          <div class="security-details">
+              <p>Contact Us</p>
+              <h2>Get in touch with the experts.</h2>
+              <span>Enter your contacts details below to send us an email or give us a call today!</span>
+              <ul class="security-list" id="contact-details">
+                  <li><a href="tel:+19018254717"><i class="fa-solid fa-phone contact-icon"></i>901.825.4717</a></li>
+                  <li><a href="mailto:castleproplumbing@gmail.com"><i class="fa-solid fa-envelope contact-icon"></i>castleproplumbing@gmail.com</a></li>
+              </ul>
           </div>
-         
-          <div class="form-row">
-              <section class="input-group">
-                  <label for="email">Email</label>
-                  <input type="email" id='email' name="email" required>
-              </section>
-              <section class="input-group">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id='phone' name="phone">
-              </section>
-          </div>
-         
-          <section class="input-group" style="margin-top: 20px;">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" cols="30" rows="5" required></textarea>
-          </section>
-         
-          <button id="send-msg-btn" type="submit">
-              Send Message <i class="fa-solid fa-paper-plane" id="paper-plane"></i>
-          </button>
-      </form>
-    </section>
-  </div>
+          <form class="contact-form">
+            <span>Message Us</span>
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id='firstName' name="firstName" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id='lastName' name="lastName" required>
+                </div>
+            </div>
+           
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id='email' name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id='phone' name="phone">
+                </div>
+            </div>
+           
+            <div class="input-group" style="margin-top: 20px;">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="30" rows="5" required></textarea>
+            </div>
+           
+            <button id="send-msg-btn" type="submit">
+                Send Message <i class="fa-solid fa-paper-plane" id="paper-plane"></i>
+            </button>
+        </form>
+      </div>
+  </section>
+  
   
   <span class="snack">
     <span class="border"></span>
