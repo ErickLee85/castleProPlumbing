@@ -107,10 +107,10 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
 
 
 const images = [
-    './images/unplash_img.jpg',
-    './images/bathroom.jpg',
-    './images/copper_piping.jpeg',
-    './images/plumber_working.jpeg',
+    './images/unplash_img_compressed.webp',
+    './images/bathroom-optimized.webp',
+    './images/copper_piping-compressed.webp',
+    './images/plumber_working-compressed.webp',
 
 ];
 
