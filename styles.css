@@ -540,13 +540,21 @@ body ,html {
   .security-image {
     min-height: 500px;
     min-width: 450px;
+    max-height: 500px;
+    max-width: 450px;
     border-radius: 20px;
-    /* background: linear-gradient(rgba(251, 251, 255,0.8), rgba(251, 251, 255,0.8)),url('./images/family.jpg'); */
-    background-image: url('./images/family-compressed.webp');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
     border: 1px solid gainsboro;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .security-image img {
+    inset: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
   }
 
   .security-list {
@@ -567,12 +575,14 @@ body ,html {
     max-width:1000px;
     display: grid;
     gap:20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 
   .image-container div {
     min-width: 320px;
+    max-width: 320px;
     min-height: 300px;
+    max-height: 300px;
     border: 1px solid gainsboro;
     border-radius: 10px;
     position: relative;
@@ -582,70 +592,14 @@ body ,html {
 
 
 
-  .image-one {
-    background-image: url('./portfolio/img_1.jpg');
-    background-size: cover;
-    background-position: center;
+  .image-container img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
-  .image-two {
-    background-image: url('./portfolio/img_2.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .image-three {
-    background-image: url('./portfolio/img_3.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .image-four {
-    background-image: url('./portfolio/img_4.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .image-five {
-    background-image: url('./portfolio/img_5.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .image-six {
-    background-image: url('./portfolio/img_6.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .image-seven {
-    background-image: url('./portfolio/img_7.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .image-eight {
-    background-image: url('./portfolio/img_8.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .image-nine {
-    background-image: url('./portfolio/img_9.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .image-ten {
-    background-image: url('./portfolio/img_10.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .image-eleven {
-    background-image: url('./portfolio/img_11.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .image-twelve {
-    background-image: url('./portfolio/img_13.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  
 
 
   .faq-container {
@@ -814,6 +768,7 @@ body ,html {
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
+    color: black;
     animation: rotation 1s linear infinite;
     }
 
@@ -903,7 +858,7 @@ body ,html {
     .faq-container {
       padding: 20px;
     }
-    .service-grid, .image-container {
+    .service-grid{
       grid-template-columns: 1fr 1fr;
     }
 
@@ -958,9 +913,11 @@ body ,html {
     }
     .image-container > div {
         min-width: 0; /* Remove the min-width constraint */
+        max-width: 0;
+        max-width: 100%;
         width: 100%;
     }
-     .service-grid, .image-container {
+     .service-grid {
       grid-template-columns: 1fr;
     }
 

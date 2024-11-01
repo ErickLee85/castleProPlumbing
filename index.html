@@ -120,11 +120,11 @@
 <body>
   <div class="contact">
     <ul class="social-links">
-      <a href="https://www.facebook.com/people/Castle-Pro-Plumbing/61565358593625/" target="_blank"><li><i class="fa-brands fa-facebook-f"></i></li></a>
-        <li onclick="openIG()"><i class="fa-brands fa-square-instagram"></i></li>
-        <a href="https://nextdoor.com/pages/castle-pro-plumbing-southaven-ms/?init_source=org_pages" target="_blank"><li><i class="fa-sharp fa-solid fa-house"></i></li></a>
+      <a aria-label="Facebook Profile link" href="https://www.facebook.com/people/Castle-Pro-Plumbing/61565358593625/" target="_blank"><li><i class="fa-brands fa-facebook-f"></i></li></a>
+        <li aria-label="Instagram Profile link" onclick="openIG()"><i class="fa-brands fa-square-instagram"></i></li>
+        <a aria-label="Nextdoor link" href="https://nextdoor.com/pages/castle-pro-plumbing-southaven-ms/?init_source=org_pages" target="_blank"><li><i class="fa-sharp fa-solid fa-house"></i></li></a>
     </ul>
-    <button id="call-btn">
+    <button id="call-btn" aria-label="Our phone number">
         <svg data-slot="icon" height="25px" class="call-icon" width="25px" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"></path>
           </svg>
@@ -132,7 +132,7 @@
     </button>
   </div>
   <header>
-    <nav>
+    <nav role="navigation" aria-label="Main Navigation">
       <div class="logo" onclick="backToTop()"></div>
       <ul class="nav-links">
         <li class="underline-hover-effect" id="services-link">Services</li>
@@ -141,7 +141,7 @@
         <li class="underline-hover-effect" id="faq-link">FAQs</li>
         <li class="underline-hover-effect" id="contact-link">Contact</li>
       </ul>
-      <button id="contact-us-btn">Contact Us</button>
+      <button id="contact-us-btn" aria-label="Contact Button">Contact Us</button>
     </nav>
   </header>
   
@@ -151,8 +151,8 @@
       <h1>Castle <br>Pro<br> Plumbing</h1>
    <p>Commercial & Residential Plumbing</p>
    <p>Serving the Mid-South <i class="fa-solid fa-location-dot" id="location-pin"></i></p>
-      <button id="call-now-btn">Call Now</button>
-      <button id="services-btn">Our Services
+      <button id="call-now-btn" aria-label="Call Us Button">Call Now</button>
+      <button id="services-btn" aria-label="Services Button">Our Services
         <svg data-slot="icon" aria-hidden="true" height="10px" width="10px" style="margin-left:10px" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path clip-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" fill-rule="evenodd"></path>
   </svg>
@@ -174,7 +174,9 @@
                 <li><span class="checkmark">✔</span>Clean & Respectful</li>
             </ul>
           </div>
-        <div class="security-image"></div>
+        <div class="security-image">
+          <img src="./images/family-compressed.webp" alt="Happy Family" loading="lazy">
+        </div>
       </div>
   </section>
 
@@ -190,8 +192,7 @@
     <section class="service-grid">
         <div class="card">
             <h3>Pipe Installation & Repair</h3>
-            <section class="clip-path">
-                    <!-- <p style=" color:black; font-size: 1.2rem;">Pipe Installation & Repair</p> -->
+            <section class="clip-path" >
                     <p>From new installations to urgent repairs, we ensure your water supply and drainage systems function flawlessly. Our quality materials and expert techniques guarantee long-lasting results.</p>
             </section>
         </div>
@@ -260,20 +261,44 @@
     <h2>Top Plumbing Projects</h2>
     <span>Our residential and commercial plumbing expertise is reflected in the successful completion of various jobs. Here are some of our standout plumbing projects.</span>
    </div>
-    <div class="image-container">
-        <div class="image-one"></div>
-        <div class="image-two"></div>
-        <div class="image-three"></div>
-        <div class="image-four"></div>
-        <div class="image-five"></div>
-        <div class="image-six"></div>
-        <div class="image-seven"></div>
-        <div class="image-eight"></div>
-        <div class="image-nine"></div>
-        <div class="image-ten"></div>
-        <div class="image-eleven"></div>
-        <div class="image-twelve"></div>
+   <div class="image-container">
+    <div>
+        <img class="image-one" src="./portfolio/img_1.jpg" alt="Portfolio Image" loading="lazy">
     </div>
+    <div>
+        <img class="image-two" src="./portfolio/img_2.jpg" alt="Portfolio Image - Water Heater Install" loading="lazy">
+    </div>
+    <div>
+        <img class="image-three" src="./portfolio/img_3.jpg" alt="Portfolio Image - New Construction" loading="lazy">
+    </div>
+    <div>
+        <img class="image-four" src="./portfolio/img_4.jpg" alt="Portfolio Image - Toilet Install" loading="lazy">
+    </div>
+    <div>
+        <img class="image-five" src="./portfolio/img_5.jpg" alt="Portfolio Image - Shower install" loading="lazy">
+    </div>
+    <div>
+        <img class="image-six" src="./portfolio/img_6.jpg" alt="Portfolio Image - Water Filtration System" loading="lazy">
+    </div>
+    <div>
+        <img class="image-seven" src="./portfolio/img_7.jpg" alt="Portfolio Image - Water Filtration System" loading="lazy">
+    </div>
+    <div>
+        <img class="image-eight" src="./portfolio/img_8.jpg" alt="Portfolio Image - Hot Water Tank" loading="lazy">
+    </div>
+    <div>
+        <img class="image-nine" src="./portfolio/img_9.jpg" alt="Portfolio Image - Hot Water Tank" loading="lazy">
+    </div>
+    <div>
+        <img class="image-ten" src="./portfolio/img_10.jpg" alt="Portfolio Image - Hot Water Tank" loading="lazy">
+    </div>
+    <div>
+        <img class="image-eleven" src="./portfolio/img_11.jpg" alt="Portfolio Image - Water Filtration System" loading="lazy">
+    </div>
+    <div>
+        <img class="image-twelve" src="./portfolio/img_13.jpg" alt="Portfolio Image - Water Filtration System" loading="lazy">
+    </div>
+ </div>
   </section>
 
   <section class="faq-container">
@@ -406,7 +431,7 @@
                 <textarea id="message" name="message" cols="30" rows="5" required></textarea>
             </div>
            
-            <button id="send-msg-btn" type="submit">
+            <button id="send-msg-btn" type="submit" aria-label="Send Message">
                 Send Message <i class="fa-solid fa-paper-plane" id="paper-plane"></i>
             </button>
         </form>
@@ -420,6 +445,7 @@
     <spa class="close">x</span>
   </span>
   <iframe
+  aria-label="Map of Service Area"
   src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d208913.40965841483!2d-90.0591611534979!3d34.98734715509558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1698421641359!5m2!1sen!2sus"
   style="border:2px solid gainsboro;"
   height="600"
