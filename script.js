@@ -22,36 +22,6 @@ function openSnack() {
  snack.classList.add('open')
 }
 
-
-// document.getElementById('send-msg-btn').addEventListener('click', async function(event) {
-//     event.preventDefault(); 
-    
-//     const formData = {
-//         firstName: document.getElementById('firstName').value,
-//         lastName: document.getElementById('lastName').value,
-//         email: document.getElementById('email').value,
-//         phone: document.getElementById('phone').value,
-//         message: document.getElementById('message').value
-//     };
-//      console.log(formData)
-
-//     const sendButton = document.getElementById('send-msg-btn');
-//     sendButton.disabled = true;
-//     sendButton.textContent = 'Sending...'; 
-
-//     try {
-//         const response = await axios.post('https://nodemailer-gold.vercel.app/emailPlumbers', formData);
-//         openSnack()
-//         sendButton.disabled = false;
-//         sendButton.textContent = 'Send Message'; 
-//       } catch (error) {
-//         sendButton.disabled = false;
-//         sendButton.textContent = 'Send Message'; 
-//         alert(error.message)
-//       }
-//       document.querySelector('.contact-form').reset();
-// });
-
 function backToTop() {
     const element = document.querySelector('.hero');
     const yOffset = -160;
@@ -302,3 +272,175 @@ contactLink.addEventListener('click', goToForm)
 contactBtn.addEventListener('click', goToForm)
 callNowBtn.addEventListener('click', callUs)
 
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero Section Animations
+const heroAnimation = () => {
+  const tl = gsap.timeline();
+  
+  tl.from('.hero-titles h1', {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    ease: 'power4.out'
+  })
+  .from('.hero-titles p', {
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: 'power3.out'
+  })
+  .from('.hero-titles button', {
+    scale: 0.8,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.2,
+    ease: 'back.out(1.7)'
+  });
+};
+
+// Navigation Animations
+const navAnimation = () => {
+  gsap.from('nav', {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out'
+  });
+  
+  gsap.from('.nav-links li', {
+    opacity: 0,
+    y: -20,
+    duration: 0.5,
+    stagger: 0.1,
+    ease: 'power2.out',
+    delay: 0.5
+  });
+};
+
+// Security Section Animation
+const securityAnimation = () => {
+  gsap.from('.security-details', {
+    scrollTrigger: {
+      trigger: '.security-details',
+      start: 'top 80%',
+      end: 'bottom 20%',
+      toggleActions: 'play none none reverse'
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out'
+  });
+
+  gsap.from('.security-image img', {
+    scrollTrigger: {
+      trigger: '.security-image',
+      start: 'top 80%',
+      end: 'bottom 20%',
+      toggleActions: 'play none none reverse'
+    },
+    scale: 0.8,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out'
+  });
+};
+
+// Services Cards Animation
+const servicesAnimation = () => {
+  gsap.from('.service-text', {
+    scrollTrigger: {
+      trigger: '.service-text',
+      start: 'top 80%',
+      toggleActions: 'play none none reverse'
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1
+  });
+
+  gsap.from('.card', {
+    scrollTrigger: {
+      trigger: '.service-grid',
+      start: 'top 80%',
+      toggleActions: 'play none none reverse'
+    },
+    y: 100,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: 'power3.out'
+  });
+};
+
+// Portfolio Images Animation
+const portfolioAnimation = () => {
+  // Set initial state for all portfolio images
+  gsap.set('.image-container div', {
+    autoAlpha: 0,
+    scale: 0.8
+  });
+
+  // Create the animation
+  gsap.to('.image-container div', {
+    scrollTrigger: {
+      trigger: '.image-container',
+      start: 'top 80%',
+      toggleActions: 'play none none reverse'
+    },
+    autoAlpha: 1,
+    scale: 1,
+    duration: 0.5,
+    stagger: {
+      amount: 0.8,
+      grid: 'auto',
+      from: 'start'
+    },
+    ease: 'back.out(1.2)'
+  });
+};
+
+// FAQ Section Animation
+const faqAnimation = () => {
+  gsap.from('.faq-item', {
+    scrollTrigger: {
+      trigger: '.faq-container',
+      start: 'top 80%',
+      toggleActions: 'play none none reverse'
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.1,
+    ease: 'power3.out'
+  });
+};
+
+// Contact Form Animation
+const contactAnimation = () => {
+  gsap.from('.contact-form', {
+    scrollTrigger: {
+      trigger: '.contact-form',
+      start: 'top 80%',
+      toggleActions: 'play none none reverse'
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out'
+  });
+};
+
+// Initialize all animations
+document.addEventListener('DOMContentLoaded', () => {
+  navAnimation();
+  heroAnimation();
+  securityAnimation();
+  servicesAnimation();
+  portfolioAnimation();
+  faqAnimation();
+  contactAnimation();
+});
